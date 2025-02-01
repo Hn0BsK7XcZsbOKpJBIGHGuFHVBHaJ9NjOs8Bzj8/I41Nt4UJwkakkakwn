@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirim HTML ke Backend</title>
+</head>
+<body>
+    <h2>Tulis HTML yang Akan Disimpan</h2>
+    <textarea id="htmlContent" rows="10" cols="50">
+        <h1>Judul</h1>
+        <p>Ini adalah contoh teks.</p>
+    </textarea>
+    <br>
+    <button onclick="kirimHTML()">Kirim ke Backend</button>
+    <script>
+        function kirimHTML() {
+            let htmlData = document.getElementById('htmlContent').value;
+    
+            fetch('http://localhost:3000/upload', { 
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ content: htmlData })
+            })
+            .then(res => res.json())
+            .then(data => alert(data.pesan))
+            .catch(err => console.error(err));
+        }
+    </script>
+
+</body>
+</html>

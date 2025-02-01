@@ -20,6 +20,16 @@ document.addEventListener("DOMContentLoaded", function() {
       <i class="fi fi-rs-circle-ellipsis-vertical" id="moreOptionButton"></i>
     </span>
   `;
+  
+  // Add Sosial Media Option
+  const sosialMediaOptionAdd = document.getElementById("sosialMediaOption");
+  sosialMediaOptionAdd.style = "order: 1;";
+  sosialMediaOptionAdd.innerHTML = `
+    <a href="https://whatsapp.com/channel/0029Vb3cz5l0wajxNVmGcR2x" style="background-image: url('./image/whatsapp.jpeg')"></a>
+    <a href="https://x.com/KeztOfficial?t=4d9COf5KwFw_TvDmi6qlZQ&s=09" style="background-image: url('./image/x.png')"></a>
+    <a href="https://www.instagram.com/kezt_official" style="background-image: url('./image/instagram.jpeg')"></a>
+    <a href="tiktok.com/@kezt_official" style="background-image: url('./image/tiktok.png')"></a>
+  `;
 
   // Load to Web
   const mainIntroArticle = document.getElementById("articleIntro");
@@ -45,10 +55,10 @@ document.addEventListener("DOMContentLoaded", function() {
   // Like System
   if (likeButtonIntroOn) {
     likeButtonIntroOn.addEventListener("click", function() {
-      if (likeButtonIntroOn.style.color === "white") {
-        likeButtonIntroOn.style.color = "red";
-      } else {
+      if (likeButtonIntroOn.style.color === "red") {
         likeButtonIntroOn.style.color = "white";
+      } else {
+        likeButtonIntroOn.style.color = "red";
       }
     });
   } else {
