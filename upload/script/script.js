@@ -1,19 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
-  console.log("DOM content loaded");
-
-  // Navigasi utama
-  const mainNavigationOnPublic = document.createElement("header");
-  mainNavigationOnPublic.style = "position: fixed; width: 100%; height: 8vh; background-color: rgba(255, 255, 255, 0.7); display: flex; align-items: center; justify-content: space-between; backdrop-filter: blur(8px); box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); z-index: 50;";
-  mainNavigationOnPublic.innerHTML = `
-    <img src="./script/logo.png" alt="Kreatif Company Logo" style="width: auto; height: 100%; margin-left: 10px;" />
-    <i class="fi fi-br-grid" style="font-size: 3rem; margin-top: 1vh; margin-right: 10px;"></i>
-  `;
-
+  console.log("DOM content loaded Script.js");
+  
   // Navigasi intro
   const introNavigationOnPublic = document.createElement("nav");
+  const introInformationTypeArticle = document.getElementById("introInformationTypeArticle").textContent;
   introNavigationOnPublic.style = "order: 1;";
   introNavigationOnPublic.innerHTML = `
-    <h1>News</h1>
+    <h1>${introInformationTypeArticle}</h1>
     <span class="icons">
       <i class="fi fi-ss-heart" id="likeButton"></i>
       <i class="fi fi-ss-share" id="shareButton"></i>
@@ -30,12 +23,58 @@ document.addEventListener("DOMContentLoaded", function() {
     <a href="https://www.instagram.com/kezt_official" style="background-image: url('./image/instagram.jpeg')"></a>
     <a href="tiktok.com/@kezt_official" style="background-image: url('./image/tiktok.png')"></a>
   `;
-
+  
+  // Footer yang bagian bawah itu
+  const footerWebsite = document.getElementById("footerWeb");
+  footerWebsite.innerHTML = `
+    <section class="akhiran">
+      <h1>Ingin Tau?</h1>
+      <p>Ingin Tau adalah sumber informasi yang mencakup berbagai aspek kehidupan, mulai dari berita terbaru, edukasi, hingga informasi menarik lainnya. Dengan pendekatan yang informatif dan mudah dipahami, Ingin Tau hadir untuk memenuhi rasa ingin tahu pembaca mengenai berbagai topik, baik yang sedang tren maupun yang jarang dibahas. Di sini, kamu bisa menemukan artikel seputar teknologi, sains, sejarah, budaya, serta perkembangan dunia yang up-to-date. Selain itu, ada juga konten edukatif yang membantu memperluas wawasan, mulai dari tips belajar, sains populer, hingga inovasi terbaru. Tak ketinggalan, Ingin Tau juga menyajikan berita terkini dengan sudut pandang yang menarik, memberikan pemahaman mendalam tanpa kehilangan esensi informasi.</p>
+      <div class="contentakhiran-container">
+        <div class="contentakhiran">
+          <p>Project</p>
+          <a href="g90nf.apk">Download</a>
+          <a href="">Refresh</a>
+        </div>
+        <div class="contentakhiran">
+          <p>Support</p>
+          <a href="https://www.kezt.my.id">Kezt</a>
+          <a href="">My Friend</a>
+        </div>
+      </div>
+      <section class="sosialmedia">
+        <a href=""><i class="fi fi-brands-tik-tok"></i></a>
+        <a href=""><i class="fi fi-brands-twitter-alt"></i></a>
+        <a href=""><i class="fi fi-brands-whatsapp"></i></a>
+        <a href=""><i class="fi fi-brands-instagram"></i></a>
+      </section>
+      <p>&copy 2025 Ingin Tau</p>
+    </section>
+  `;
+  
+  // Style and Module css
+  const moduleSuportArticle = [
+    "https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap",
+    "https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css",
+    "https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css",
+    "https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css",
+    "https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css",
+    "https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css",
+    "https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css",
+    "https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css",
+    "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  ];
+  
   // Load to Web
   const mainIntroArticle = document.getElementById("articleIntro");
   mainIntroArticle.insertBefore(introNavigationOnPublic, mainIntroArticle.firstChild);
-  document.body.insertBefore(mainNavigationOnPublic, document.body.firstChild);
-
+  moduleSuportArticle.forEach(href => {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = href;
+    document.head.appendChild(link);
+  });
+  
   // Sistem sumber dari image
   let mainArticle = document.getElementById('mainArticle');
   if (!mainArticle) return;
@@ -46,12 +85,12 @@ document.addEventListener("DOMContentLoaded", function() {
     addressImages.textContent = "Sumber: " + domain;
     img.insertAdjacentElement('afterend', addressImages);
   });
-
+  
   // Button Option Intro
   let likeButtonIntroOn = document.getElementById("likeButton");
   let shareButtonIntroOn = document.getElementById("shareButton");
   let moreOptionButtonIntroOn = document.getElementById("moreOptionButton");
-
+  
   // Like System
   if (likeButtonIntroOn) {
     likeButtonIntroOn.addEventListener("click", function() {
@@ -64,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
   } else {
     sistem.message.log("Terjadi Kesalahan");
   }
-
+  
   // Share System (hanya jika diperlukan)
   if (shareButtonIntroOn) {
     shareButtonIntroOn.addEventListener("click", function() {
@@ -82,4 +121,27 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   }
+  
+  moreOptionButton.addEventListener("click", function () {
+    sistem.message.info("Fitur ini masih dalam pengembangan dan belum dapat digunakan. :(");
+  });
+  
+  // Deteksi tag name Account
+  const pTagID = document.getElementById('userID');
+  const h1UserName = document.getElementById('userName');
+  const username = pTagID.textContent.replace('@', '').trim();
+
+  fetch('https://raw.githubusercontent.com/kMsno293792Nbdi83Z90828Vb92028mnBvc29/kMsno293792Nbdi83Z90828Vb92028mnBvc29.github.io/main/api/account-data.json')
+    .then(response => response.json())
+    .then(data => {
+      if (data[username]) {
+        h1UserName.textContent = data[username].username;
+      } else {
+        h1UserName.textContent = 'Username tidak ditemukan';
+      }
+    })
+    .catch(error => {
+      console.error('Error loading JSON:', error);
+      h1UserName.textContent = 'Ups, Gagal memuat data';
+    });
 });

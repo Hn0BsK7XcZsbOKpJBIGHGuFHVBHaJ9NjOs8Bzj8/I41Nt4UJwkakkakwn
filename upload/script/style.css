@@ -1,236 +1,62 @@
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  clear: both;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
-}
-
-/* Mobile Design */
-/* Bagian awal article atau intro */
-.article-intro {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  overflow: hidden;
-}
-
-.article-intro > article {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding-top: 9vh;
-  padding-left: 15px;
-  padding-right: 15px;
-  z-index: 10;
-}
-
-.article-intro > article > nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.article-intro > article > nav > h1 {
-  font-weight: bold;
-  color: #d1d5db;
-  font-family: "Nunito", sans-serif;
-  font-size: 3.5vh;
-}
-
-.article-intro > article > nav > .icons {
-  display: flex;
-  color: white;
-  font-size: 4vh;
-  gap: 15px;
-}
-
-.article-intro > article > nav > .icons > i {
-  transition: 0.5s all;
-}
-
-.article-intro > article > h2 {
-  font-weight: 800;
-  color: white;
-  font-family: "Nunito", sans-serif;
-  font-size: 5vh;
-  order: 2;
-}
-
-.article-intro > .background {
-  position: absolute;
-  background-size: cover;
-  background-position: center;
-  width: 100vw;
-  height: 100vh;
-  filter: brightness(0.7) blur(8px);
-  z-index: 0;
-  top: 0;
-  left: 0;
-}
-
-.article-intro > .header-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  margin: 15px;
-  z-index: 15;
-}
-
-.article-intro > .header-bottom > .hastag {
+@media (max-width: 1024px) {
+  header {
+    position: fixed;
+    width: 100%;
+    height: 8vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+  }
   
-}
-
-.article-intro > .header-bottom > .profile {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 80%;
-  height: auto;
-  box-shadow: 3px 3px 6px #00000065;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-.article-intro > .header-bottom > .profile > .data-profile {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 75%;
-  height: 8vh;
-  background: #ffffff80;
-  padding: 10px;
-}
-
-.article-intro > .header-bottom > .profile > .data-profile > img {
-  width: auto;
-  height: 100%;
-  border-radius: 50%;
-  float: left;
-}
-
-.article-intro > .header-bottom > .profile > .data-profile > div {
-  margin-left: 15px;
-  overflow-x: scroll;
-  white-space: nowrap;
-}
-
-.article-intro > .header-bottom > .profile  > .data-profile > div > h1 {
-  color: #fff;
-  font-weight: 500;
-  font-family: Nunito, 'Sans-Serif';
-  font-size: 3.5vh;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-}
-
-.article-intro > .header-bottom > .profile  > .data-profile > div > p {
-  color: #dedede;
-  font-weight: 500;
-  font-family: Nunito, 'Sans-Serif';
-  font-size: 2vh;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-}
-
-/* Bagian Tombol Follow */
-.article-intro > .header-bottom > .profile > .follow {
-  display: flex;
-  width: 25%;
-  height: 8vh;
-  background: #eb0000;
-  padding: 10px;
-  margin: 0;
-  color: #ffffff;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
+  header > img {
+    width: auto;
+    height: 100%;
+    margin-left: 10px;
+  }
+  
+  header > i {
+    font-size: 3rem;
+    margin-top: 2vh;
+    margin-right: 10px;
+    color: #252525;
+  }
 }
 
 
-/* Isi artikel atau Bagian utama artikel */
-.main-article {
-  padding: 15px;
-}
 
-.main-article > #sosialMediaOption {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 0 auto 15px auto;
-  overflow: hidden;
-  border-radius: 25px;
-  width: 60vw;
-  height: 8vh;
-}
 
-.main-article > #sosialMediaOption > a {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-}
 
-.main-article > h1 {
-  color: #0b0b0b;
-  font-family: Nunito, "Sans-Serif";
-  font-size: 35px;
-  text-align: left;
-  font-weight: bold;
-  margin: 1px;
-}
-
-.main-article > h2 {
-  color: #0b0b0b;
-  font-family: Nunito, "Sans-Serif";
-  font-size: 25px;
-  text-align: left;
-  font-weight: bold;
-  margin: 1px;
-}
-
-.main-article > p {
-  display: inline;
-  color: #202020;
-  font-family: Nunito, "Sans-Serif";
-  font-size: 17px;
-  text-align: left;
-  margin: 1px;
-}
-
-.main-article > a {
-  display: inline;
-  color: #202020;
-  font-family: Nunito, "Sans-Serif";
-  font-size: 17px;
-  text-align: left;
-  margin: 1px;
-}
-
-.main-article > img {
-  width: 100%;
-  height: auto;
-}
-
-.main-article > address {
-  display: block;
-  color: #4f4f4f;
-  font-family: Nunito, "Sans-Serif";
-  font-size: 14px;
-  text-align: left;
-  margin: 1px;
+@media (min-width: 1024px) {  
+  header {     
+    position: fixed;     
+    width: 100%;     
+    height: 8vh;     
+    background-color: rgba(255, 255, 255, 0.7);     
+    display: flex;     
+    align-items: center;     
+    justify-content: center;     
+    backdrop-filter: blur(8px);     
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);     
+    z-index: 50;   
+    
+  }      
+  
+  header > img {    
+    width: auto;     
+    height: 100%;     
+    margin-left: 10px;   
+    
+  }      
+  
+  header > i {     
+    font-size: 3rem;     
+    margin-top: 2vh;     
+    margin-right: 10px;     
+    color: #252525;     
+    display: none;   
+  }
 }

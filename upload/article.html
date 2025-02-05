@@ -3,43 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#cc1515">
+  <meta property="og:title" content="Judul Buku">
+  <meta property="og:description" content="Book Page G90NF">
+  <meta property="og:image" content="">
+  <link rel="shortcut icon" href="./image/main.png" type="image/x-icon" />
   <link rel="stylesheet" href="./script/style.css" type="text/css" media="all" />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css" />
-  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css" />
-  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css" />
-  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+  <link rel="stylesheet" href="./script/article.css" type="text/css" media="all" />
   <title>Home</title>
 </head>
 <body>
   <section class="article-intro">
     <article id="articleIntro">
-      <h2 class="judul-intro">Coming Soon! Ingin Tau akan segera hadir!</h2>
+      <h2 class="judul-intro" id="titleArticle">Coming Soon! Ingin Tau akan segera hadir!</h2>
     </article>
     <div class="header-bottom">
-      <div class="hastag">
-        <!-- Tambahkan hashtag jika diperlukan -->
+      <div class="hastag" class="hastagArticle">
+        #ComingSoon #Ditunggu #InginTau #Information
       </div>
       <div class="profile">
         <div class="data-profile">
           <img src="https://i.imgur.com/PU0kPFL.png" alt="">
           <div>
-            <h1>Mr. Misteri Suka Misterius</h1>
-            <p>@mr.misteri.co.id</p>
+            <h1 id="userName">Memuat...</h1>
+            <p id="userID">@11808910</p>
           </div>
-        </div>
-        <div class="follow">
-          <i class="fi fi-br-plus"></i>
         </div>
       </div>
     </div>
-    <div class="background" style="background-image: url('https://i.imgur.com/bz7aRSO.jpeg');"></div>
+    <div class="background" style="background-image: url('https://media.istockphoto.com/id/2166028678/id/foto/sustainable-resources-green-building.jpg?s=612x612&w=0&k=20&c=GgzuugnLqYdYau0uBOdDB8c34V0ca8OAX-6eBVM-WnY=');"></div>
   </section>
   <section class="main-article" id='mainArticle'>
     <div id="sosialMediaOption">
       <!-- Hewek Heweh -->
     </div>
-    <img src="https://i.imgur.com/bz7aRSO.jpeg" alt="">
+    <img src="https://i.imgur.com/bz7aRSO.jpeg" alt="" id="imageArticle">
     <br>
     <hr>
     <br>
@@ -48,9 +46,15 @@
     <p>Text Deskripsi minimal panjang laa</p>
     <a href="https://www.kezt.my.id/">https://www.kezt.my.id/</a>
     <img src="https://media.istockphoto.com/id/474267374/id/foto/refleksi-di-danau.webp?b=1&s=612x612&w=0&k=20&c=GuWozyCFYULb_sj1cvUgMhEy0jH_1vRc6c_Mhcl6jJY=" alt="" />
+    <button onclick="sistem.message.confirm('https://kezt.my.id/', 'Apakah anda yakin ingin melajutkannya? Anda akan keluar dari situs kami, dan kami tidak dapat mendeteksi apa yang ada di dalam url tersebut.')">Tombol klik</button>
   </section>
+  <p style="opacity: 0;" id="introInformationTypeArticle">News</p>
+  <footer id="footerWeb">
+    
+  </footer>
   
   <script src="./script/script.js" type="text/javascript" charset="utf-8"></script>
-  <script src="https://api.kezt.my.id/kesis-message-log.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./script/main.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://kezt.my.id/lib/kesis-message-log.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
