@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Navigasi utama
   const mainNavigationOnPublic = document.createElement("header");
   mainNavigationOnPublic.innerHTML = `
-    <img src="https://ingintau.kezt.my.id/upload/script/logo.png" alt="Kreatif Company Logo" id="navigationImage" />
+    <img src="https://caritau.kezt.my.id/upload/script/logo.png" alt="Cari Tau Logo" id="navigationImage" />
     <i class="fi fi-br-bars-staggered" id="buttonOpenSidebar"></i>
   `;
 

@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const h1UserName = document.getElementById('userName');
   const username = pTagID.textContent.replace('@', '').trim();
 
-  fetch('https://raw.githubusercontent.com/kMsno293792Nbdi83Z90828Vb92028mnBvc29/kMsno293792Nbdi83Z90828Vb92028mnBvc29.github.io/main/api/account-data.json')
+  fetch('https://caritau.kezt.my.id//api/account-data.json')
     .then(response => response.json())
     .then(data => {
       if (data[username]) {
